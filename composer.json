@@ -1,0 +1,7 @@
+{
+    "name": "ProcessID/OVH",
+    "description": "OVH API management",
+    "require": {
+        "php": "^5.3"
+    }
+}
