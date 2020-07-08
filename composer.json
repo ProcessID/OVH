@@ -2,7 +2,8 @@
     "name": "processid/ovh",
     "description": "OVH API management",
     "require": {
-        "php": ">=5.4"
+        "php": ">=5.4",
+        "processid/traits": "1.*"
     },
     "autoload": {
         "psr-4": {
