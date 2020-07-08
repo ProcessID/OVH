@@ -1,5 +1,5 @@
 <?php
-   namespace ProcessID\OVH;
+   namespace processid\ovh;
    
    class SendRest {
       protected $applicationKey;

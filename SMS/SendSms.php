@@ -37,9 +37,9 @@
    // Caractères autorisés : https://en.wikipedia.org/wiki/GSM_03.38
    
 */   
-   namespace ProcessID\OVH\SMS;
+   namespace processid\ovh\SMS;
    
-   use ProcessID\OVH\SendRest;
+   use processid\ovh\SendRest;
    
    class SendSms extends SendRest {
       
