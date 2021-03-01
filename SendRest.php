@@ -59,7 +59,7 @@
         function api_call() {
             $BodyJson = json_encode($this->body());
             $timestamp = time();
-            $url = $this->url() . $this->api() . '/';
+            $url = $this->url() . $this->api();
 
             $ToSign = $this->applicationSecret() . '+' . $this->consumerKey() . '+' . $this->method() . '+' . $url . '+' . $BodyJson . '+' . $timestamp;
             $Signature = '$1$' . (strtolower(str_replace(array("\r\n", "\n", "\r", " "), '', bin2hex(hash('sha1', $ToSign, true)))));
