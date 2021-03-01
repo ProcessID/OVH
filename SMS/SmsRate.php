@@ -18,7 +18,7 @@ echo $SmsRate->result();
 echo ('Erreur lors de la récupération du prix d\'envoi d\'un SMS');
 }
 
-// $billingCountry est le pays de acturation
+// $billingCountry est le pays de facturation
 // $country est le pays vers lequel le SMS doit être envoyé
 // Ces 2 valeurs doivent être au format ISO 2 caractères
 
