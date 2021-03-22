@@ -59,7 +59,7 @@
       
       function __construct($donnees) {
          parent::__construct($donnees);
-         $this->setApi("/1.0/sms/" . $this->serviceName() . "/jobs");
+         $this->setApi("/1.0/sms/" . $this->serviceName() . "/jobs/");
       }
    }
 ?>
