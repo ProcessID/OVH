@@ -37,7 +37,6 @@
       }
       
       function status($id) {
-         $this->setBody($param);
          $this->setMethod('GET');
          $this->setApi($this->api().$id);
          return $this->api_call();
