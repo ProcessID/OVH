@@ -40,12 +40,7 @@
          $this->setBody($param);
          $this->setMethod('GET');
          $this->setApi($this->api().$id);
-         $result = $this->api_call();
-         if ($result) {
-             return $this->result();
-         } else {
-             return false;
-         }
+         return $this->api_call();
       }
       
       function __construct($donnees) {
