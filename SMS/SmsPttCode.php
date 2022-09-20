@@ -39,7 +39,7 @@ echo ('Erreur lors de la récupération du code PTT');
 
         function pttCode($code) {
             $this->setMethod('GET');
-            $this->setApi('/1.0/sms/ptts/'.$code);
+            $this->setApi('/1.0/sms/ptts/?ptt='.$code);
             return $this->api_call();
         }
 
