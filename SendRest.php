@@ -13,6 +13,7 @@
         protected $url;
         protected $body;
         protected $result;
+        protected $httpResponse;
 
         function __construct($donnees) {
             $this->hydrate($donnees);
@@ -27,6 +28,7 @@
         function url() { return $this->url; }
         function body() { return $this->body; }
         function result() { return $this->result; }
+        function httpResponse() { return $this->httpResponse; }
 
         function setApplicationKey($applicationKey) { $this->applicationKey = $applicationKey; }
         function setApplicationSecret($applicationSecret) { $this->applicationSecret = $applicationSecret; }
@@ -55,6 +57,7 @@
         function setUrl($url) { $this->url = $url; }
         function setBody($body) { $this->body = $body; }
         function setResult($result) { $this->result = $result; }
+        function setHttpResponse($httpResponse) { $this->httpResponse = $httpResponse; }
 
         function api_call() {
             $BodyJson = json_encode($this->body());
@@ -79,9 +82,9 @@
             $context = stream_context_create($opts);
 
             $result = file_get_contents($url,false,$context);
-
-            if ($result == false) {
-                trigger_error('Erreur lors de l\'appel a l\'API OVH classe : ' . __CLASS__,E_USER_NOTICE);
+            $this->setHttpResponse($http_response_header);
+            
+            if ($result === false) {
                 return false;
             } else {
                 $this->setResult($result);
