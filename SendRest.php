@@ -66,6 +66,7 @@
             $opts = array(
                 'http'=>array(
                     'method'=>$this->method(),
+                    'ignore_errors'=>TRUE,
                     'header'=>'Content-type: application/json'. "\r\n"
                     . 'X-Ovh-Application: ' . $this->applicationKey() . "\r\n"
                     . 'X-Ovh-Consumer: ' . $this->consumerKey() . "\r\n"
